@@ -1,32 +1,14 @@
 plugins {
 	kotlin("jvm") version "1.9.0"
 	kotlin("plugin.serialization") version "1.9.0"
-	`maven-publish`
 }
 
 group = "io.github.magonxesp"
 version = "0.0.2"
 
-publishing {
-	repositories {
-		maven {
-			name = "GitHubPackages"
-			url = uri("https://maven.pkg.github.com/magonxesp/booru-client")
-			credentials {
-				username = System.getenv("GITHUB_USERNAME")
-				password = System.getenv("GITHUB_TOKEN")
-			}
-		}
-	}
-	publications {
-		register<MavenPublication>("gpr") {
-			from(components["java"])
-		}
-	}
-}
-
 repositories {
 	mavenCentral()
+	maven { setUrl("https://jitpack.io") }
 }
 
 dependencies {
