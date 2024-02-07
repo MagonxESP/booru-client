@@ -1,17 +1,44 @@
 # Booru client
+[![](https://jitpack.io/v/MagonxESP/booru-client.svg)](https://jitpack.io/#MagonxESP/booru-client)
 
 Danbooru, yande.re and konachan client for kotlin
+
+## Instalation
+
+Add the jitpack repository
+
+```kotlin
+repositories {
+	mavenCentral()
+	maven { setUrl("https://jitpack.io") }
+}
+```
+
+And the dependency and the required dependencies
+
+```kotlin
+implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlin_corroutines_version") // required
+implementation("io.arrow-kt:arrow-core:$arrowkt_version") // required
+implementation("com.github.MagonxESP:booru-client:0.0.2")
+```
 
 ## Usage
 
 Search by tag on Konachan for example.
 
 ```kotlin
-val client = KonachanClient()
+runBlocking {
+    val client = KonachanClient()
 
-val posts = client.search {
-    tag("sousou_no_frieren")
+    client.search {
+        tag("sousou_no_frieren")
+    }.onRight { posts ->
+        posts.forEach { post ->
+            println(post.previewUrl)
+        }
+    }
 }
+
 ```
 
 The `search` method has a lambda that builds the search query.
