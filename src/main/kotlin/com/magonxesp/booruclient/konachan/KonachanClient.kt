@@ -3,13 +3,13 @@ package com.magonxesp.booruclient.konachan
 import arrow.core.Either
 import arrow.core.left
 import com.magonxesp.booruclient.Client
-import io.github.magonxesp.booruclient.ClientException
-import io.github.magonxesp.booruclient.Tag
+import com.magonxesp.booruclient.ClientException
+import com.magonxesp.booruclient.Tag
 import io.ktor.client.request.*
 import io.ktor.client.statement.*
 import io.ktor.http.*
 
-open class KonachanClient : com.magonxesp.booruclient.Client() {
+open class KonachanClient : Client() {
 	override val baseUrl: String = "https://konachan.net"
 
 	class Builder {

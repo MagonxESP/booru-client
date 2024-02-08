@@ -1,7 +1,5 @@
 package com.magonxesp.booruclient.konachan
 
-import io.github.magonxesp.booruclient.konachan.KonachanPost
-
 object KonachanPostMother {
 	fun createExisting() = KonachanPost(
 		id =  370878,

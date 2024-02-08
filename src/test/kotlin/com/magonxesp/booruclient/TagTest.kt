@@ -1,7 +1,5 @@
 package com.magonxesp.booruclient
 
-import io.github.magonxesp.booruclient.ClientException
-import io.github.magonxesp.booruclient.Tag
 import io.kotest.assertions.throwables.shouldThrowExactly
 import io.kotest.core.spec.style.AnnotationSpec
 import io.kotest.matchers.equals.shouldBeEqual

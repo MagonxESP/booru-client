@@ -1,6 +1,5 @@
 package com.magonxesp.booruclient.danbooru
 
-import io.github.magonxesp.booruclient.danbooru.DanbooruClient
 import io.kotest.core.spec.style.AnnotationSpec
 import io.kotest.matchers.shouldBe
 import io.kotest.matchers.shouldNotBe

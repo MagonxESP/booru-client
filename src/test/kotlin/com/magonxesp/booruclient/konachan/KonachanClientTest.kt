@@ -1,7 +1,5 @@
 package com.magonxesp.booruclient.konachan
 
-import io.github.magonxesp.booruclient.konachan.KonachanClient
-import io.github.magonxesp.booruclient.konachan.Order
 import io.kotest.core.spec.style.AnnotationSpec
 import io.kotest.matchers.collections.shouldBeIn
 import io.kotest.matchers.shouldBe

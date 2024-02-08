@@ -13,7 +13,7 @@ data class MediaAsset(
 	@SerialName("file_size") val fileSize: Long,
 	@SerialName("image_width") val imageWidth: Int,
 	@SerialName("image_height") val imageHeight: Int,
-	@SerialName("duration") val duration: String?,
+	@SerialName("duration") val duration: Double?,
 	@SerialName("status") val status: String,
 	@SerialName("file_key") val fileKey: String,
 	@SerialName("is_public") val isPublic: Boolean,

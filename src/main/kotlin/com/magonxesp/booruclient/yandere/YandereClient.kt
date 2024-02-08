@@ -3,13 +3,13 @@ package com.magonxesp.booruclient.yandere
 import arrow.core.Either
 import arrow.core.left
 import com.magonxesp.booruclient.Client
-import io.github.magonxesp.booruclient.ClientException
-import io.github.magonxesp.booruclient.Tag
+import com.magonxesp.booruclient.ClientException
+import com.magonxesp.booruclient.Tag
 import io.ktor.client.request.*
 import io.ktor.client.statement.*
 import io.ktor.http.*
 
-class YandereClient : com.magonxesp.booruclient.Client() {
+class YandereClient : Client() {
 	override val baseUrl: String = "https://yande.re/"
 
 	class Builder {

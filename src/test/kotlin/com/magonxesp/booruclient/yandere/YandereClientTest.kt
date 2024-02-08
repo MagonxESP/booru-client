@@ -1,6 +1,5 @@
 package com.magonxesp.booruclient.yandere
 
-import io.github.magonxesp.booruclient.yandere.YandereClient
 import io.kotest.core.spec.style.AnnotationSpec
 import io.kotest.matchers.shouldBe
 import io.kotest.matchers.shouldNotBe

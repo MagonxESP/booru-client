@@ -2,9 +2,8 @@ package com.magonxesp.booruclient.danbooru
 
 import arrow.core.Either
 import arrow.core.left
-import com.magonxesp.booruclient.Client
-import io.github.magonxesp.booruclient.ClientException
-import io.github.magonxesp.booruclient.Tag
+import com.magonxesp.booruclient.ClientException
+import com.magonxesp.booruclient.Tag
 import io.ktor.client.request.*
 import io.ktor.client.statement.*
 import io.ktor.http.*
