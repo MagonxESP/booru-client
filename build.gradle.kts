@@ -1,10 +1,11 @@
 plugins {
 	kotlin("jvm") version "1.9.0"
 	kotlin("plugin.serialization") version "1.9.0"
+	`maven-publish`
 }
 
-group = "io.github.magonxesp"
-version = "0.0.3"
+group = "com.github.magonxesp"
+version = "0.0.4"
 
 repositories {
 	mavenCentral()
@@ -16,7 +17,6 @@ dependencies {
 	val kotlin_serialization_version: String by project
 	val kotlin_corroutines_version: String by project
 	val kotest_version: String by project
-	val arrowkt_version: String by project
 
 	implementation("io.ktor:ktor-client-core:$ktor_version")
 	implementation("io.ktor:ktor-client-cio:$ktor_version")
