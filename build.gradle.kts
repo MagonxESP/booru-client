@@ -6,7 +6,25 @@ plugins {
 }
 
 group = "com.github.magonxesp"
-version = "0.0.5"
+version = "0.0.6"
+
+publishing {
+	repositories {
+		maven {
+			name = "GitHubPackages"
+			url = uri("https://maven.pkg.github.com/magonxesp/booru-client")
+			credentials {
+				username = System.getenv("GITHUB_USERNAME")
+				password = System.getenv("GITHUB_TOKEN")
+			}
+		}
+	}
+	publications {
+		register<MavenPublication>("gpr") {
+			from(components["java"])
+		}
+	}
+}
 
 repositories {
 	mavenCentral()
