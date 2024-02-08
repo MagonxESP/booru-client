@@ -1,11 +1,12 @@
 plugins {
 	kotlin("jvm") version "1.9.0"
 	kotlin("plugin.serialization") version "1.9.0"
+	`java-library`
 	`maven-publish`
 }
 
 group = "com.github.magonxesp"
-version = "0.0.4"
+version = "0.0.5"
 
 repositories {
 	mavenCentral()
