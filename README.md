@@ -1,5 +1,5 @@
 # Booru client
-[![](https://jitpack.io/v/MagonxESP/booru-client.svg)](https://jitpack.io/#MagonxESP/booru-client)
+[![](https://jitpack.io/v/magonxesp/booru-client.svg)](https://jitpack.io/#magonxesp/booru-client)
 
 Danbooru, yande.re and konachan client for kotlin
 
@@ -9,8 +9,8 @@ Add the jitpack repository
 
 ```kotlin
 repositories {
-	mavenCentral()
-	maven { setUrl("https://jitpack.io") }
+    mavenCentral()
+    maven { setUrl("https://jitpack.io") }
 }
 ```
 
@@ -18,8 +18,7 @@ And the dependency and the required dependencies
 
 ```kotlin
 implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlin_corroutines_version") // required
-implementation("io.arrow-kt:arrow-core:$arrowkt_version") // required
-implementation("com.github.MagonxESP:booru-client:0.0.2")
+implementation("com.github.magonxesp:booru-client:0.0.6")
 ```
 
 ## Usage
@@ -27,15 +26,16 @@ implementation("com.github.MagonxESP:booru-client:0.0.2")
 Search by tag on Konachan for example.
 
 ```kotlin
+import com.magonxesp.booruclient.konachan.KonachanClient
+import kotlinx.coroutines.runBlocking
+
 runBlocking {
     val client = KonachanClient()
 
     client.search {
         tag("sousou_no_frieren")
-    }.onRight { posts ->
-        posts.forEach { post ->
-            println(post.previewUrl)
-        }
+    }.forEach { post ->
+        println(post.previewUrl)
     }
 }
 
