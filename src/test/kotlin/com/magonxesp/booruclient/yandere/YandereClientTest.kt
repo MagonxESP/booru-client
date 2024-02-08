@@ -2,7 +2,6 @@ package com.magonxesp.booruclient.yandere
 
 import io.kotest.core.spec.style.AnnotationSpec
 import io.kotest.matchers.shouldBe
-import io.kotest.matchers.shouldNotBe
 import kotlinx.coroutines.test.runTest
 
 class YandereClientTest : AnnotationSpec() {
@@ -15,9 +14,7 @@ class YandereClientTest : AnnotationSpec() {
 			tag("sousou_no_frieren")
 		}
 
-		posts.leftOrNull() shouldBe null
-		posts.getOrNull() shouldNotBe null
-		true shouldBe posts.getOrNull()!!.isNotEmpty()
+		true shouldBe posts.isNotEmpty()
 	}
 
 }

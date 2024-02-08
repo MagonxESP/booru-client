@@ -1,8 +1,5 @@
 package com.magonxesp.booruclient.konachan
 
-import arrow.core.Option
-import arrow.core.toOption
-
 enum class Rating(val value: String) {
 	SAFE("safe"),
 	QUESTIONABLE("questionable"),
@@ -13,8 +10,8 @@ enum class Rating(val value: String) {
 	fun toSearchString() = "rating:$value"
 
 	companion object {
-		fun fromValue(value: String): Option<Rating> {
-			return entries.find { it.value == value }.toOption()
+		fun fromValue(value: String): Rating? {
+			return entries.find { it.value == value }
 		}
 	}
 }

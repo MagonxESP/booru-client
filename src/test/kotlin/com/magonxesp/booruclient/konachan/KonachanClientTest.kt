@@ -2,8 +2,6 @@ package com.magonxesp.booruclient.konachan
 
 import io.kotest.core.spec.style.AnnotationSpec
 import io.kotest.matchers.collections.shouldBeIn
-import io.kotest.matchers.shouldBe
-import io.kotest.matchers.shouldNotBe
 import kotlinx.coroutines.test.runTest
 
 class KonachanClientTest : AnnotationSpec() {
@@ -17,9 +15,7 @@ class KonachanClientTest : AnnotationSpec() {
 			tag("sousou_no_frieren")
 		}
 
-		posts.leftOrNull() shouldBe null
-		posts.getOrNull() shouldNotBe null
-		post shouldBeIn posts.getOrNull()!!
+		post shouldBeIn posts
 	}
 
 	@Test
@@ -32,8 +28,6 @@ class KonachanClientTest : AnnotationSpec() {
 			order(Order.SCORE)
 		}
 
-		posts.leftOrNull() shouldBe null
-		posts.getOrNull() shouldNotBe null
-		post shouldBeIn posts.getOrNull()!!
+		post shouldBeIn posts
 	}
 }

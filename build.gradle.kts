@@ -22,8 +22,6 @@ dependencies {
 	implementation("io.ktor:ktor-client-cio:$ktor_version")
 	implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:$kotlin_serialization_version")
 	implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlin_corroutines_version")
-	implementation("io.arrow-kt:arrow-core:$arrowkt_version")
-	implementation("io.arrow-kt:arrow-fx-coroutines:$arrowkt_version")
 	testImplementation(kotlin("test"))
 	testImplementation("io.kotest:kotest-runner-junit5:$kotest_version")
 }
