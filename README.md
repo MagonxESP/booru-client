@@ -57,3 +57,4 @@ The other clients have only the `tag` method for search.
 * `com.magonxesp.booruclient.konachan.KonachanClient` The Konachan sfw client
 * `com.magonxesp.booruclient.konachan.KonachanNsfwClient` The Konachan nsfw client
 * `com.magonxesp.booruclient.yandere.YandereClient` The Yande.re client
+* `com.magonxesp.booruclient.safebooru.SafebooruClient.kt` The Safebooru client
