@@ -7,7 +7,7 @@ class Tag(val value: String) {
 	}
 
 	private fun validate() {
-		if (!Regex("[a-zA-Z*]+(?:_[a-zA-Z*]+)*").matches(value)) {
+		if (!Regex("^[a-zA-Z\\*\\-0-9]+(?:_[a-zA-Z\\*\\-0-9]+)*\$").matches(value)) {
 			throw ClientException.InvalidTagFormat("The format of the tag is invalid, the valid format is for example: suzumiya_haruhi")
 		}
 	}
