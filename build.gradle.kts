@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "com.github.magonxesp"
-version = "0.0.6"
+version = "0.1.0"
 
 publishing {
 	repositories {
