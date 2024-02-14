@@ -14,9 +14,12 @@ version = "0.1.0"
 publishing {
 	publications {
 		register<MavenPublication>("booru-client") {
+			artifactId = "booru-client"
 			from(components["java"])
 
 			pom {
+				name = "Booru client"
+				description = "Danbooru, yande.re and konachan client for kotlin"
 				url = "https://github.com/magonxesp/booru-client"
 				licenses {
 					license {
@@ -25,15 +28,29 @@ publishing {
 				}
 				developers {
 					developer {
+						id = "magonxesp"
 						name = "MagonxESP"
+						email = "magonxesp@gmail.com"
 						url = "https://github.com/magonxesp"
 					}
 				}
 				scm {
+					connection = "scm:git:git://github.com/magonxesp/booru-client.git"
+					developerConnection = "scm:git:ssh://github.com/magonxesp/booru-client.git"
 					url = "https://github.com/magonxesp/booru-client"
 				}
 			}
 		}
+	}
+}
+
+signing {
+	sign(publishing.publications["booru-client"])
+}
+
+tasks.javadoc {
+	if (JavaVersion.current().isJava9Compatible) {
+		(options as StandardJavadocDocletOptions).addBooleanOption("html5", true)
 	}
 }
 
