@@ -1,24 +1,14 @@
 # Booru client
-[![](https://jitpack.io/v/magonxesp/booru-client.svg)](https://jitpack.io/#magonxesp/booru-client)
 
 Danbooru, yande.re and konachan client for kotlin
 
 ## Instalation
 
-Add the jitpack repository
-
-```kotlin
-repositories {
-    mavenCentral()
-    maven { setUrl("https://jitpack.io") }
-}
-```
-
-And the dependency and the required dependencies
+Add the dependency and the required dependencies
 
 ```kotlin
 implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlin_corroutines_version") // required
-implementation("com.github.magonxesp:booru-client:0.1.0")
+implementation("io.github.magonxesp:booru-client:0.1.0")
 ```
 
 ## Usage

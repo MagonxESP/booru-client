@@ -16,30 +16,6 @@ publishing {
 		register<MavenPublication>("booru-client") {
 			artifactId = "booru-client"
 			from(components["java"])
-
-			pom {
-				name = "Booru client"
-				description = "Danbooru, yande.re and konachan client for kotlin"
-				url = "https://github.com/magonxesp/booru-client"
-				licenses {
-					license {
-						name = "MIT"
-					}
-				}
-				developers {
-					developer {
-						id = "magonxesp"
-						name = "MagonxESP"
-						email = "magonxesp@gmail.com"
-						url = "https://github.com/magonxesp"
-					}
-				}
-				scm {
-					connection = "scm:git:git://github.com/magonxesp/booru-client.git"
-					developerConnection = "scm:git:ssh://github.com/magonxesp/booru-client.git"
-					url = "https://github.com/magonxesp/booru-client"
-				}
-			}
 		}
 	}
 }
@@ -55,13 +31,34 @@ tasks.javadoc {
 }
 
 centralPortal {
-	username = System.getenv("SONATYPE_USERNAME")
-	password = System.getenv("SONATYPE_PASSWORD")
+	pom {
+		name = "Booru client"
+		description = "Danbooru, yande.re and konachan client for kotlin"
+		url = "https://github.com/magonxesp/booru-client"
+		licenses {
+			license {
+				name = "The MIT License (MIT)"
+				url = "https://mit-license.org/"
+			}
+		}
+		developers {
+			developer {
+				id = "magonxesp"
+				name = "MagonxESP"
+				email = "magonxesp@gmail.com"
+				url = "https://github.com/magonxesp"
+			}
+		}
+		scm {
+			connection = "scm:git:git://github.com/magonxesp/booru-client.git"
+			developerConnection = "scm:git:ssh://github.com/magonxesp/booru-client.git"
+			url = "https://github.com/magonxesp/booru-client"
+		}
+	}
 }
 
 repositories {
 	mavenCentral()
-	maven { setUrl("https://jitpack.io") }
 }
 
 dependencies {
