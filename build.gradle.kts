@@ -1,29 +1,45 @@
+
 plugins {
 	kotlin("jvm") version "1.9.0"
 	kotlin("plugin.serialization") version "1.9.0"
 	`java-library`
 	`maven-publish`
+	signing
+	id("net.thebugmc.gradle.sonatype-central-portal-publisher") version "1.1.1"
 }
 
-group = "com.github.magonxesp"
+group = "io.github.magonxesp"
 version = "0.1.0"
 
 publishing {
-	repositories {
-		maven {
-			name = "GitHubPackages"
-			url = uri("https://maven.pkg.github.com/magonxesp/booru-client")
-			credentials {
-				username = System.getenv("GITHUB_USERNAME")
-				password = System.getenv("GITHUB_TOKEN")
+	publications {
+		register<MavenPublication>("booru-client") {
+			from(components["java"])
+
+			pom {
+				url = "https://github.com/magonxesp/booru-client"
+				licenses {
+					license {
+						name = "MIT"
+					}
+				}
+				developers {
+					developer {
+						name = "MagonxESP"
+						url = "https://github.com/magonxesp"
+					}
+				}
+				scm {
+					url = "https://github.com/magonxesp/booru-client"
+				}
 			}
 		}
 	}
-	publications {
-		register<MavenPublication>("gpr") {
-			from(components["java"])
-		}
-	}
+}
+
+centralPortal {
+	username = System.getenv("SONATYPE_USERNAME")
+	password = System.getenv("SONATYPE_PASSWORD")
 }
 
 repositories {
