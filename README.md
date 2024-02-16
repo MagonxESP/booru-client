@@ -8,7 +8,7 @@ Add the dependency and the required dependencies
 
 ```kotlin
 implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlin_corroutines_version") // required
-implementation("io.github.magonxesp:booru-client:0.1.0")
+implementation("io.github.magonxesp:booru-client:1.0.0")
 ```
 
 ## Usage
