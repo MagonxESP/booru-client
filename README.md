@@ -16,7 +16,7 @@ implementation("io.github.magonxesp:booru-client:0.1.0")
 Search by tag on Konachan for example.
 
 ```kotlin
-import com.magonxesp.booruclient.konachan.KonachanClient
+import io.github.magonxesp.booruclient.konachan.KonachanClient
 import kotlinx.coroutines.runBlocking
 
 runBlocking {
@@ -43,8 +43,8 @@ The other clients have only the `tag` method for search.
 
 ### Available clients
 
-* `com.magonxesp.booruclient.danbooru.DanbooruClient` The Danbooru client
-* `com.magonxesp.booruclient.konachan.KonachanClient` The Konachan sfw client
-* `com.magonxesp.booruclient.konachan.KonachanNsfwClient` The Konachan nsfw client
-* `com.magonxesp.booruclient.yandere.YandereClient` The Yande.re client
-* `com.magonxesp.booruclient.safebooru.SafebooruClient.kt` The Safebooru client
+* `io.github.magonxesp.booruclient.danbooru.DanbooruClient` The Danbooru client
+* `io.github.magonxesp.booruclient.konachan.KonachanClient` The Konachan sfw client
+* `io.github.magonxesp.booruclient.konachan.KonachanNsfwClient` The Konachan nsfw client
+* `io.github.magonxesp.booruclient.yandere.YandereClient` The Yande.re client
+* `io.github.magonxesp.booruclient.safebooru.SafebooruClient.kt` The Safebooru client
