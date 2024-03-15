@@ -1,10 +1,6 @@
----
-description: >-
-  Booru client is an API wrapper for Kotlin (JVM) of the API for Danbooru,
-  Konachan.com, Konachan.net, Yande.re and Safebooru.
----
-
 # Introduction
+
+Booru client is an API wrapper for Kotlin (JVM) of the API for Danbooru, Konachan.com, Konachan.net, Yande.re and Safebooru.
 
 ### Getting started
 
